@@ -4,10 +4,6 @@ import streamlit as st
 import random
 import time
 
-# 외부 접속을 위한 임시 URL 생성
-external_url = st.experimental_tunnel("0.0.0.0", 8501)  # 기본 포트는 8501
-st.write(f"외부에서 접근하려면 다음 링크를 사용하세요: {external_url}")
-
 # Streamed response emulator
 def response_generator():
     response = random.choice(
